@@ -1,0 +1,145 @@
+:root
+{
+    --primary--color:#ee4d2d;
+    --white--color:#fff;
+    --black--color:#000;
+    --text--color:#333;
+    --star--gold:#ffce3e;
+    --height--header:120px;
+    --height--navbar:38px;
+    --height--search: calc(var(--height--header) - var(--height--navbar));
+    --header--sort-bar-height:48px;
+}
+*{
+    box-sizing: inherit;
+}
+html{
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+.grid__row
+{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left:-5px;
+    margin-right: -5px;
+}
+.grid__column-2
+{
+padding-left: 5px;
+padding-right:5px;
+width: 16.6667%;
+}
+.grid__column-10
+{
+padding-left: 5px;
+padding-right:5px;
+width:83.3333%;
+}
+.grid__column-2-4
+{
+padding-left: 5px;
+padding-right:5px;
+width: 20%;
+}
+/*Amination*/
+@keyframes fadeIn
+{
+    from
+    {
+        opacity: 0;
+    }
+    to
+    {
+        opacity: 1;
+    }
+}
+@keyframes growth
+{
+from{
+    transform: scale(0);
+}
+to
+{
+    transform: scale(1);
+}
+}
+.btn
+{
+min-width: 120px;
+height: 36px;
+text-decoration: none;
+background-color: var(--white--color);
+font-size: 1.5rem;
+border: none;
+border-radius: 2px;
+padding: 0;
+cursor: pointer;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.btn.btn--size-s
+{
+    height: 32px;
+    font-size: 1.2rem;
+}
+.btn:hover
+{
+    background-color: rgb(169, 223, 205);
+}
+.btn.btn--primary
+{
+    color:var(--white--color);
+background-color:rgb(253, 72, 72);
+}
+.btn.btn--primary:hover
+{
+    opacity: 0.7;
+}
+.btn.btn--disable
+{
+    cursor: default;
+    color: aliceblue;
+    background-color: rgb(197, 194, 194);
+}
+
+
+/*Pagination*/
+
+.pagination
+{
+display: flex;
+justify-content: center;
+align-items: center;
+list-style: none;
+padding: 0;
+}
+
+.pagination-item__link
+{
+    display: block;
+text-decoration: none;
+min-width: 40px;
+height: 30px;
+display: block;
+font-size: 2rem;
+line-height: 30px;
+color:#939393;
+text-align: center;
+}
+.pagination-item--active
+{
+background-color: var(--primary--color);
+color: var(--white--color);
+}
+.pagination-item--active:hover
+{
+    filter: brightness(95%);
+}
+.pagination-item
+{
+margin: 0 12px;
+}
